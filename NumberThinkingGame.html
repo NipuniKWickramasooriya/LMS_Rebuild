@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Game</title>
+
+		
+		<!--CSS-->
+		<style type="text/css">
+			body{
+				background-image: url(wallpaperbetter.jpg);
+			}
+
+			.content{
+				text-align: center;
+				margin-top: 150px;
+			}
+		</style>
+		
+	</head>
+
+	<!--HTML-->
+	<body>
+		<div class="content">
+		<h4>What is the number you think?</h4>
+		<p>Enter the number here</p>
+		<input type="text" id="txtBox"/><br><br>
+		<button id="guessBtn">Check</button>
+		</div>
+
+		<!--JAVA SCRIPT-->
+		<script type="text/javascript">
+			//alert(Math.floor(Math.random()*10));
+
+			document.getElementById("guessBtn").onclick=function(){
+				var randomNumber = Math.random();
+				randomNumber = randomNumber * 11;
+				randomNumber = Math.floor(randomNumber);
+
+				if(document.getElementById("txtBox").value == randomNumber){
+					alert("Yes! You are the winner");
+				}
+				else{
+					alert("No, I am thinking number " + randomNumber);
+				}
+			}
+		</script>
+	</body>
+</html>
